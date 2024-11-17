@@ -43,10 +43,10 @@ data class Surah(
     val englishName: String,
     val englishNameTranslation: String,
     val revelationType: String,
-    val ayahs: List<Ayat>
+    val ayahs: List<Ayah>
 )
 
-data class Ayat(
+data class Ayah(
     val number: Int,
     val text: String,
     val numberInSurah: Int,

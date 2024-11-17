@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewSurah)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         lifecycleScope.launch {

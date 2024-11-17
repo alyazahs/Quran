@@ -1,5 +1,6 @@
 package com.alyazah.quran
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +16,13 @@ class SurahAdapter(private val surahs: List<Surah>) : RecyclerView.Adapter<Surah
     override fun onBindViewHolder(holder: SurahViewHolder, position: Int) {
         val surah = surahs[position]
         holder.bind(surah)
+
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(it.context, AyahActivity::class.java)
+            intent.putExtra("SURAH_NUMBER", surah.number)
+            it.context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = surahs.size
