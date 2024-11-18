@@ -21,12 +21,7 @@ class AyahAdapter(private val ayahs: List<Ayah>) : RecyclerView.Adapter<AyahAdap
 
     class AyahViewHolder(private val binding: ItemAyahBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(ayah: Ayah) {
-            // Memeriksa apakah ayat adalah surat pertama dan berisi "Bismillah"
-            binding.ayahText.text = if (ayah.text.startsWith("بِسْمِ")) {
-                ayah.text.removePrefix("بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ ")
-            } else {
-                ayah.text
-            }
+            binding.ayahText.text = ayah.text
         }
     }
 }
